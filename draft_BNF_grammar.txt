@@ -1,0 +1,32 @@
+<allMySpending> ::= <dayWorthOfSpending> | <dayWorthOfSpending><allMySpending>
+
+<dayWorthOfSpending> ::= <date>INDENT<listOfReceipts>DEINDENT
+
+<date> ::= yyyy-mm-dd
+
+<listOfReceipts> ::= <receipt> | <receipt><listOfReceipts>
+
+<receipt> ::= <location>INDENT<listOfItems><taxItem>DEINDENT 
+<receipt> ::= <location>INDENT<listOfItems>DEINDENT
+
+<location> ::= @<string> | @
+
+<listOfItems> ::= <item> | <item><listOfItems>
+
+<item> ::= <description><price><tags> | <price><listOfTags> | <price>
+
+<description> ::= "<string>"
+
+<price> ::= /regex/
+
+<listOfTags> ::= [ <tags> ]
+
+<tags> ::= <tag> | <tag>,<tags>
+
+<tag> ::= <string>
+
+<taxItem> ::= <tax><price>
+
+<tax> ::= /T\s*A\s*X\s*:/ ignore case
+
+<string> ::= /.+/
