@@ -44,11 +44,11 @@ An expense has three parts: the location, the items purchased at that location, 
 Here's an example:
 
 <pre>
-2012-12-24                   <-- date
-	@Sell                      <-- location
-		"gas" 30 [auto, gas]     <-- item purchased
+2012-12-24                   // date
+	@Sell                      // location
+		"gas" 30 [auto, gas]     // item purchased
 		"gum" 1.20 [candy]
-		tax: 3                   <-- sales tax
+		tax: 3                   // sales tax
 </pre>
 
 The location must have an @ sign, may have a name, must be indented, and must be on it's own line.
