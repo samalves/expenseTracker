@@ -86,7 +86,7 @@ In place of an amount you may add an expression. By expression, I mean series of
 Heres an example of it being used in an item line:
 
 <pre>
-"pizza for dinner" >2*9.99< [eat out, cheat meal]
+"pizza for dinner" &gt;2*9.99%lt; [eat out, cheat meal]
 </pre>
 
 The parser will substitute the expression with the total value for the expression.
